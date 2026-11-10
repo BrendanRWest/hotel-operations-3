@@ -32,14 +32,12 @@ public class Hotel {
         if(suite){
             if(getAvailableSuites() + roomCount > 0){
                 bookedSuites += roomCount;
-                numberOfSuites -= roomCount;
                 booked = true;
                 System.out.println("Suite booked successfully.");
             }
         } else {
             if(getAvailableRooms() + roomCount > 0){
                 bookedBasicRooms += roomCount;
-                numberOfRooms -= roomCount;
                 booked = true;
                 System.out.println("Room booked successfully.");
             }
