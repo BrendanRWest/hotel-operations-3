@@ -24,18 +24,22 @@ public class Hotel {
     }
 
     public boolean bookRoom(int roomCount, boolean suite){
+        if(roomCount <= 0){
+            return false;
+        }
+
         boolean booked = false;
         if(suite){
-            if(getAvailableSuites()>0){
-                bookedSuites += 1;
-                numberOfSuites -= 1;
+            if(getAvailableSuites() + roomCount > 0){
+                bookedSuites += roomCount;
+                numberOfSuites -= roomCount;
                 booked = true;
                 System.out.println("Suite booked successfully.");
             }
         } else {
-            if(getAvailableRooms()>0){
-                bookedBasicRooms += 1;
-                numberOfRooms -= 1;
+            if(getAvailableRooms() + roomCount > 0){
+                bookedBasicRooms += roomCount;
+                numberOfRooms -= roomCount;
                 booked = true;
                 System.out.println("Room booked successfully.");
             }
