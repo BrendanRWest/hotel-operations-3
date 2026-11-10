@@ -8,12 +8,21 @@ public class Hotel {
     private int bookedBasicRooms;
 
     private Hotel(String name, int numberOfSuites, int numberOfRooms){
+        this.name = name;
+        this.numberOfSuites = numberOfSuites;
+        this.numberOfRooms = numberOfRooms;
+
+
         bookedBasicRooms = 0;
         bookedSuites = 0;
     }
 
     private Hotel(String name, int numberOfSuites, int numberOfRooms, int bookedSuites, int bookedBasicRooms){
-
+        this.name = name;
+        this.numberOfSuites = numberOfSuites;
+        this.numberOfRooms = numberOfRooms;
+        this.bookedSuites = bookedSuites;
+        this.bookedBasicRooms = bookedBasicRooms;
     }
 
     public boolean bookRoom(int roomCount, boolean suite){
