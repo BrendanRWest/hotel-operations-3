@@ -30,8 +30,22 @@ class RoomTest {
 
         // Assert
         assertFalse(available);
+    }
 
+    @Test
+    public void cleanRoom_UnoccupiedRoomCanBeCleaned_True(){
+        // Arrange
+        Room room3 = new Room(2, 139.00);
 
+        // Act
+        room3.checkIn();
+        room3.checkOut();
+        room3.cleanRoom();
+
+        boolean clean = !room3.isDirty();
+
+        // Assert
+        assertTrue(clean);
 
     }
 }
