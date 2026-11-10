@@ -11,10 +11,8 @@ public class Hotel {
         this.name = name;
         this.numberOfSuites = numberOfSuites;
         this.numberOfRooms = numberOfRooms;
-
-
-        bookedBasicRooms = 0;
-        bookedSuites = 0;
+        this.bookedBasicRooms = 0;
+        this.bookedSuites = 0;
     }
 
     private Hotel(String name, int numberOfSuites, int numberOfRooms, int bookedSuites, int bookedBasicRooms){
@@ -51,5 +49,25 @@ public class Hotel {
 
     public int getAvailableRooms() {
         return numberOfRooms - bookedBasicRooms;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumberOfSuites() {
+        return numberOfSuites;
+    }
+
+    public int getBookedBasicRooms() {
+        return bookedBasicRooms;
+    }
+
+    public int getBookedSuites() {
+        return bookedSuites;
+    }
+
+    public int getNumberOfRooms() {
+        return numberOfRooms;
     }
 }
