@@ -19,5 +19,19 @@ class RoomTest {
         assertTrue(occupied);
     }
 
+    @Test
+    public void checkIn_OccupiedRoomCanBeCheckedInto_False(){
+        // Arrange
+        Room room2 = new Room(2, 139.00);
 
+        // Act
+        room2.checkIn();
+        boolean available = room2.isAvailable();
+
+        // Assert
+        assertFalse(available);
+
+
+
+    }
 }
