@@ -61,6 +61,7 @@ public class Employee {
     public void punchIn(double time) {
         startTime = time;
     }
+
     public void punchIn(){
         LocalDateTime now = LocalDateTime.now();
         int hour = now.getHour();
